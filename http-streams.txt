@@ -1,0 +1,91 @@
+From listerner or other method (from Raw header on FireFox) 
+
+http://localhost:2540/dog.txt
+Accept: text/html,application/xhtml+xm…plication/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+Cache-Control: max-age=0
+Connection: keep-alive
+Host: localhost:2540
+Referer: http://localhost:2540/dynamic.html
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/62.0
+
+http://localhost:2540/cat.html
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/dynamic.html
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+
+http://localhost:2540/addnums.html
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+http://localhost:2540/cgi/addnums.fake-cgi?person=YourName&num1=4&num2=5
+Accept: text/html,application/xhtml+xm…plication/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+Cache-Control: max-age=0
+Connection: keep-alive
+Host: localhost:2540
+Referer: http://localhost:2540/addnums.html
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/62.0
+
+http://localhost:2540/sub-a/sub-b/
+Accept: text/html,application/xhtml+xm…plication/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+Cache-Control: max-age=0
+Connection: keep-alive
+Host: localhost:2540
+Referer: http://localhost:2540/sub-a/
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; …) Gecko/20100101 Firefox/62.0
+
+
+
+
+
+From MyTelnetClient or other method (from Raw header on FireFox) 
+
+http://localhost:2540/dog.txt
+HTTP/1.1 200 OK
+Content-Length: 48
+Content-Type: text/plain
+
+http://localhost:2540/cat.html
+HTTP/1.1 200 OK
+Content-Length: 120
+Content-Type: text/html
+
+
+http://localhost:2540/addnums.html
+HTTP/1.1 200 OK
+Content-Length: 441
+Content-Type: text/html
+
+http://localhost:2540/cgi/addnums.fake-cgi?person=YourName&num1=4&num2=5
+HTTP/1.1 200 OK
+Content-Length 51
+Content-Type text/html
+**This doesn't show on raw header in firefox but I printed this on the MyWebServer and captured it from MyWebServer**
+
+http://localhost:2540/sub-a/sub-b/
+HTTP/1.1 200 OK
+Content-Length 197
+Content-Type text/html
+**This doesn't show on raw header in firefox but I printed this on the MyWebServer and captured it from MyWebServer**
+
+

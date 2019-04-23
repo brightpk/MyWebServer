@@ -1,0 +1,80 @@
+What's on my MyWebServer side:
+I didn't echo the text in the files but I returned all files to the broswer
+
+
+
+1) http://localhost:2540/
+GET / HTTP/1.1
+addnums.html
+cat.html
+checklist-mywebserver.html
+dog.txt
+dynamic.html
+http-streams.txt
+MyWebServer.class
+MyWebServer.java
+sub-a
+WebSerWoker.class
+Sent directory to the browser: dynamic.html
+
+HTTP/1.1 200 OK
+Content-Length: 576
+Content-Type: text/html
+
+
+
+
+2) http://localhost:2540/dog.txt
+GET /dog.txt HTTP/1.1
+Opened file on the broswer: dog.txt
+
+HTTP/1.1 200 OK
+Content-Length: 48
+Content-Type: text/plain
+
+
+
+
+3) http://localhost:2540/cat.html
+GET /cat.html HTTP/1.1
+Opened file on the broswer: cat.html
+
+HTTP/1.1 200 OK
+Content-Length: 120
+Content-Type: text/html
+
+
+
+
+4) http://localhost:2540/sub-a/sub-b/
+GET /sub-a/sub-b/ HTTP/1.1
+Sent directory to the browser: dynamic.html
+
+HTTP/1.1 200 OK
+Content-Length: 197
+Content-Type: text/html
+
+
+
+5) http://localhost:2540/sub-a/sub-b/dog.txt
+GET /sub-a/sub-b/dog.txt HTTP/1.1
+Opened file on the broswer: sub-a/sub-b/dog.txt
+
+HTTP/1.1 200 OK
+Content-Length: 48
+Content-Type: text/plain
+
+
+5) http://localhost:2540/cgi/addnums.fake-cgi?person=Bright&num1=7&num2=5
+GET /cgi/addnums.fake-cgi?person=Bright&num1=7&num2=5 HTTP/1.1
+Called on the browser: addnums.fake-cgi
+
+HTTP/1.1 200 OK
+Content-Length: 49
+Content-Type: text/html
+
+Hello! Bright
+7 + 5 = 12
+
+
+
